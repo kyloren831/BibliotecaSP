@@ -59,10 +59,10 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.biblioteca_en_linea__1_;
-            pictureBox1.Location = new Point(106, 53);
+            pictureBox1.Image = Properties.Resources.biblioteca_publica;
+            pictureBox1.Location = new Point(114, 53);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 50);
+            pictureBox1.Size = new Size(100, 76);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;

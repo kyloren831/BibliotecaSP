@@ -19,7 +19,16 @@ namespace BLL.Servicios
 
         public List<Usuario> ListarUsuarios()
         {
-            var lista = _context.Usuarios.ToList();
+            var lista = new List<Usuario>();
+            try
+            {
+                lista = _context.Usuarios.ToList();
+            }
+            catch (Exception ex)
+            {
+                lista = null;
+            }
+             
             return lista;
         }
 
@@ -36,7 +45,7 @@ namespace BLL.Servicios
                     _context.Usuarios.Add(usuario);
                     _context.SaveChanges();
                     transaccion.Commit();
-                    return usuario.Nombre + " agregado correctamente.";
+                    return "Agregado correctamente.";
                 }
                 catch (Exception ex)
                 {
@@ -56,10 +65,16 @@ namespace BLL.Servicios
             {
                 try
                 {
-                    _context.Usuarios.Update(usuario);
+                    temp.Nombre = usuario.Nombre;
+                    temp.Correo = usuario.Correo;
+                    temp.Clave = usuario.Clave;
+                    temp.Activo=usuario.Activo;
+                    temp.FechaCreacion=usuario.FechaCreacion;
+
+                    _context.Usuarios.Update(temp);
                     _context.SaveChanges();
                     transaccion.Commit();
-                    return usuario.Nombre + " editado correctamente.";
+                    return "Editado correctamente.";
                 }
                 catch (Exception ex)
                 {

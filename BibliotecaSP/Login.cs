@@ -45,10 +45,11 @@ namespace BibliotecaSP
                         MessageBox.Show("Correo no encontrado");
                         break;
                     case 0:
-                        MessageBox.Show("Credenciales no validas");
+                        MessageBox.Show("Clave incorrecta");
                         break;
                     case 1:
                         MessageBox.Show("Autenticado");
+                        this.Close();
                         break;
                 }
             }
