@@ -53,7 +53,7 @@
             // 
             lbTitulo.AutoSize = true;
             lbTitulo.Font = new Font("SimSun", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbTitulo.Location = new Point(12, 9);
+            lbTitulo.Location = new Point(0, 9);
             lbTitulo.Name = "lbTitulo";
             lbTitulo.Size = new Size(257, 24);
             lbTitulo.TabIndex = 0;
@@ -63,32 +63,33 @@
             // 
             dataGridUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridUsuarios.ContextMenuStrip = contextMenuStrip1;
-            dataGridUsuarios.Location = new Point(12, 85);
+            dataGridUsuarios.Location = new Point(0, 85);
             dataGridUsuarios.Name = "dataGridUsuarios";
-            dataGridUsuarios.Size = new Size(646, 150);
+            dataGridUsuarios.Size = new Size(635, 172);
             dataGridUsuarios.TabIndex = 1;
+            dataGridUsuarios.CellClick += girUsrs_CellClick;
             dataGridUsuarios.CellContentClick += dataGridView1_CellContentClick;
             // 
             // contextMenuStrip1
             // 
             contextMenuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, toolStripMenuItem2 });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(181, 70);
+            contextMenuStrip1.Size = new Size(118, 48);
             contextMenuStrip1.Text = "Editar";
             // 
             // toolStripMenuItem1
             // 
             toolStripMenuItem1.AccessibleName = "btnEditarUsuario";
             toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(180, 22);
+            toolStripMenuItem1.Size = new Size(117, 22);
             toolStripMenuItem1.Text = "Editar";
-            toolStripMenuItem1.Click += this.btnEditar_Click;
+            toolStripMenuItem1.Click += btnEditar_Click;
             // 
             // toolStripMenuItem2
             // 
             toolStripMenuItem2.AccessibleName = "btnEliminarUsuario";
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(180, 22);
+            toolStripMenuItem2.Size = new Size(117, 22);
             toolStripMenuItem2.Text = "Eliminar";
             // 
             // btnAddUser
@@ -97,7 +98,7 @@
             btnAddUser.Font = new Font("Palatino Linotype", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAddUser.Image = Properties.Resources.mas;
             btnAddUser.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAddUser.Location = new Point(514, 46);
+            btnAddUser.Location = new Point(491, 46);
             btnAddUser.Name = "btnAddUser";
             btnAddUser.Size = new Size(144, 33);
             btnAddUser.TabIndex = 10;
@@ -110,7 +111,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("SimSun", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(12, 248);
+            label1.Location = new Point(0, 269);
             label1.Name = "label1";
             label1.Size = new Size(196, 19);
             label1.TabIndex = 11;
@@ -120,7 +121,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("SimSun", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(408, 248);
+            label2.Location = new Point(408, 269);
             label2.Name = "label2";
             label2.Size = new Size(64, 19);
             label2.TabIndex = 12;
@@ -129,7 +130,7 @@
             // dataGridPermisos
             // 
             dataGridPermisos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridPermisos.Location = new Point(12, 279);
+            dataGridPermisos.Location = new Point(0, 302);
             dataGridPermisos.Name = "dataGridPermisos";
             dataGridPermisos.Size = new Size(337, 150);
             dataGridPermisos.TabIndex = 13;
@@ -137,7 +138,7 @@
             // dataGridRoles
             // 
             dataGridRoles.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridRoles.Location = new Point(408, 279);
+            dataGridRoles.Location = new Point(408, 302);
             dataGridRoles.Name = "dataGridRoles";
             dataGridRoles.Size = new Size(380, 150);
             dataGridRoles.TabIndex = 14;
@@ -148,7 +149,7 @@
             button1.Font = new Font("Palatino Linotype", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.Image = Properties.Resources.mas;
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(478, 242);
+            button1.Location = new Point(478, 263);
             button1.Name = "button1";
             button1.Size = new Size(33, 34);
             button1.TabIndex = 15;
@@ -160,15 +161,16 @@
             button2.Font = new Font("Palatino Linotype", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.Image = Properties.Resources.mas;
             button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(214, 242);
+            button2.Location = new Point(202, 263);
             button2.Name = "button2";
             button2.Size = new Size(33, 34);
             button2.TabIndex = 16;
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(12, 51);
+            textBox1.Location = new Point(0, 51);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(188, 23);
             textBox1.TabIndex = 17;
