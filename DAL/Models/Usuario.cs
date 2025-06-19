@@ -30,6 +30,7 @@ namespace DAL.Models
         [Column("FECHACREACION")]
         public DateTime FechaCreacion { get; set; }
 
-        public List<PermisoUsuario> PermisoUsuarios { get; set; } 
+        public List<PermisoUsuario> PermisoUsuarios { get; set; }
+        public List<UsuarioRol> UsuarioRoles {  get; set; }
     }
 }

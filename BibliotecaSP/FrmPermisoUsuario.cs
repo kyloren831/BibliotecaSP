@@ -33,7 +33,7 @@ namespace BibliotecaSP
         private void cargarCombos()
         {
             foreach (var item in idsUsuarios)
-            {
+            { 
                 this.comboIdUsuario.Items.Add(item);
             }
             foreach (var item in idsPantallas)

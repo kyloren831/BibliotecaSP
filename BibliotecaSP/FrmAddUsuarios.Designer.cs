@@ -61,7 +61,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("MV Boli", 15.75F, FontStyle.Bold);
-            label1.Location = new Point(986, 2);
+            label1.Location = new Point(1083, 2);
             label1.Name = "label1";
             label1.Size = new Size(28, 28);
             label1.TabIndex = 10;
@@ -74,14 +74,14 @@
             panel1.Controls.Add(label1);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1017, 30);
+            panel1.Size = new Size(1114, 30);
             panel1.TabIndex = 1;
             // 
             // lbTitulo
             // 
             lbTitulo.AutoSize = true;
             lbTitulo.Font = new Font("SimSun", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbTitulo.Location = new Point(181, 137);
+            lbTitulo.Location = new Point(217, 137);
             lbTitulo.Name = "lbTitulo";
             lbTitulo.Size = new Size(205, 24);
             lbTitulo.TabIndex = 2;
@@ -91,7 +91,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("SimSun", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(45, 206);
+            label2.Location = new Point(81, 206);
             label2.Name = "label2";
             label2.Size = new Size(130, 19);
             label2.TabIndex = 12;
@@ -179,16 +179,16 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources._20250617_2318_Gestión_de_Usuarios_Biblioteca_simple_compose_01jy0qfy15fwxseab79v400gv2;
-            pictureBox2.Location = new Point(554, 33);
+            pictureBox2.Location = new Point(613, 33);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(463, 484);
+            pictureBox2.Size = new Size(501, 484);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 14;
             pictureBox2.TabStop = false;
             // 
             // txtID
             // 
-            txtID.Location = new Point(181, 202);
+            txtID.Location = new Point(217, 202);
             txtID.MaxLength = 10;
             txtID.Name = "txtID";
             txtID.Size = new Size(74, 23);
@@ -198,7 +198,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("SimSun", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(45, 242);
+            label3.Location = new Point(81, 242);
             label3.Name = "label3";
             label3.Size = new Size(86, 19);
             label3.TabIndex = 16;
@@ -206,7 +206,7 @@
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(181, 238);
+            txtNombre.Location = new Point(217, 238);
             txtNombre.MaxLength = 50;
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(281, 23);
@@ -216,7 +216,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("SimSun", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(45, 285);
+            label4.Location = new Point(81, 285);
             label4.Name = "label4";
             label4.Size = new Size(86, 19);
             label4.TabIndex = 18;
@@ -224,7 +224,7 @@
             // 
             // txtCorreo
             // 
-            txtCorreo.Location = new Point(181, 281);
+            txtCorreo.Location = new Point(217, 281);
             txtCorreo.MaxLength = 50;
             txtCorreo.Name = "txtCorreo";
             txtCorreo.Size = new Size(281, 23);
@@ -232,7 +232,7 @@
             // 
             // txtClave
             // 
-            txtClave.Location = new Point(181, 322);
+            txtClave.Location = new Point(217, 322);
             txtClave.MaxLength = 10;
             txtClave.Name = "txtClave";
             txtClave.Size = new Size(281, 23);
@@ -242,7 +242,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("SimSun", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(45, 326);
+            label5.Location = new Point(81, 326);
             label5.Name = "label5";
             label5.Size = new Size(75, 19);
             label5.TabIndex = 20;
@@ -252,7 +252,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("SimSun", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(296, 206);
+            label6.Location = new Point(332, 206);
             label6.Name = "label6";
             label6.Size = new Size(86, 19);
             label6.TabIndex = 22;
@@ -263,7 +263,7 @@
             comboActivo.DropDownStyle = ComboBoxStyle.DropDownList;
             comboActivo.FormattingEnabled = true;
             comboActivo.Items.AddRange(new object[] { "Si", "No" });
-            comboActivo.Location = new Point(388, 202);
+            comboActivo.Location = new Point(424, 202);
             comboActivo.Name = "comboActivo";
             comboActivo.Size = new Size(74, 23);
             comboActivo.TabIndex = 23;
@@ -272,7 +272,7 @@
             // 
             button1.BackColor = Color.FromArgb(255, 192, 192);
             button1.Font = new Font("Palatino Linotype", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(181, 361);
+            button1.Location = new Point(217, 361);
             button1.Name = "button1";
             button1.Size = new Size(111, 38);
             button1.TabIndex = 25;
@@ -284,7 +284,7 @@
             // 
             button2.BackColor = Color.FromArgb(255, 255, 192);
             button2.Font = new Font("Palatino Linotype", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(351, 361);
+            button2.Location = new Point(387, 361);
             button2.Name = "button2";
             button2.Size = new Size(111, 38);
             button2.TabIndex = 26;
@@ -296,7 +296,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1018, 517);
+            ClientSize = new Size(1112, 517);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(comboActivo);

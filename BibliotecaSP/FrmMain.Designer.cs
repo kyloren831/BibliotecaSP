@@ -49,14 +49,14 @@
             panel1.Controls.Add(label1);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1017, 30);
+            panel1.Size = new Size(1112, 30);
             panel1.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("MV Boli", 15.75F, FontStyle.Bold);
-            label1.Location = new Point(986, 2);
+            label1.Location = new Point(1084, 0);
             label1.Name = "label1";
             label1.Size = new Size(28, 28);
             label1.TabIndex = 10;
@@ -156,14 +156,14 @@
             panelContenido1.BackColor = SystemColors.AppWorkspace;
             panelContenido1.Location = new Point(199, 52);
             panelContenido1.Name = "panelContenido1";
-            panelContenido1.Size = new Size(805, 448);
+            panelContenido1.Size = new Size(900, 448);
             panelContenido1.TabIndex = 2;
             // 
             // FrmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1016, 516);
+            ClientSize = new Size(1111, 516);
             Controls.Add(panelContenido1);
             Controls.Add(panel2);
             Controls.Add(panel1);

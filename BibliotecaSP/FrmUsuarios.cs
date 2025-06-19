@@ -15,22 +15,26 @@ namespace BibliotecaSP
 {
     public partial class FrmUsuarios : Form
     {
+        //Servicios
         private ServicioUsuarios servicioUsuarios;
-
         private ServicioPermisosDirectos servicioPermisosDirectos;
         private ServicioPantallas servicioPantallas;
-        private List<Usuario> usuarios;
+        private ServicioUsuarioRol servicioUsuarioRol;
+
+        //
+        private List<Usuario> listaUsuarios = null;
         public FrmUsuarios()
         {
             InitializeComponent();
             this.servicioUsuarios = new ServicioUsuarios();
             this.servicioPantallas = new ServicioPantallas();
             this.servicioPermisosDirectos = new ServicioPermisosDirectos();
+            this.servicioUsuarioRol=new ServicioUsuarioRol();
             cargarUsuarios();
         }
         public void cargarUsuarios()
         {
-            var listaUsuarios = servicioUsuarios.ListarUsuarios();
+            this.listaUsuarios = servicioUsuarios.ListarUsuarios();
             if (listaUsuarios != null)
             {
                 cargarGrid<Usuario>(this.dataGridUsuarios, listaUsuarios);
@@ -83,7 +87,7 @@ namespace BibliotecaSP
             }
         }
 
-        
+
         private void btnEditar_Click(object sender, EventArgs e)
         {
             try
@@ -121,6 +125,14 @@ namespace BibliotecaSP
                 cargarGrid<PermisosUsuarioDTO>(this.dataGridPermisos, lista, new List<string> { "IdUsuario", "IdPantalla" });
             }
         }
+        public void cargarRoles(int id)
+        {
+            var lista = this.servicioUsuarioRol.Listar(id);
+            if (lista != null)
+            {
+                cargarGrid<UsuarioRolDTO>(this.dataGridRoles, lista, new List<string> { "IdUsuario", "IdRol" });
+            }
+        }
         private void girUsrs_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // Verificamos si hay filas seleccionadas
@@ -132,6 +144,7 @@ namespace BibliotecaSP
                 if (!string.IsNullOrEmpty(idUsuario))
                 {
                     cargarPermisos(int.Parse(idUsuario));
+                    cargarRoles(int.Parse(idUsuario));
                 }
             }
         }
@@ -142,7 +155,8 @@ namespace BibliotecaSP
             {
                 var usuarios = servicioUsuarios.ListarUsuarios();
                 var pantallas = servicioPantallas.ListarPantallas();
-                if (usuarios != null && pantallas !=null ) {
+                if (usuarios != null && pantallas != null)
+                {
                     List<string> idsPantallas = new List<string>();
                     List<string> idsUsuarios = new List<string>();
                     foreach (var item in usuarios)
@@ -153,20 +167,55 @@ namespace BibliotecaSP
                     {
                         idsPantallas.Add(item.IdPantalla.ToString());
                     }
-                    FrmPermisoUsuario frm = new FrmPermisoUsuario(this,this.servicioPermisosDirectos,idsPantallas,idsUsuarios);
+                    FrmPermisoUsuario frm = new FrmPermisoUsuario(this, this.servicioPermisosDirectos, idsPantallas, idsUsuarios);
                     frm.ShowDialog();
                 }
-                else 
+                else
                 {
-                    MessageBox.Show("No hay usuarios o pantallas disponibles"); 
+                    MessageBox.Show("No hay usuarios o pantallas disponibles");
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string searchValue = txtFiltro.Text.ToLower();
+            var usuariosFiltrados = new List<Usuario>();// Obtener el texto de búsqueda
+
+            if (string.IsNullOrEmpty(searchValue))
+            {
+                // Si no hay texto, mostrar todos los registros
+                usuariosFiltrados = this.listaUsuarios.ToList();
+                cargarGrid<Usuario>(this.dataGridUsuarios, usuariosFiltrados);
+            }
+            else
+            {
+                if (searchValue != "Buscar por correo o por nombre".ToLower())
+                {
+                    usuariosFiltrados = this.listaUsuarios.Where(c => c.Nombre.Contains(searchValue) ||
+                                          c.Correo.ToString().Contains(searchValue)).ToList();
+
+                    cargarGrid<Usuario>(this.dataGridUsuarios, usuariosFiltrados);
                 }
                 
             }
-            catch (Exception ex)
-                {
+        }
 
-                    throw ex;
-                }
+        private void btnFiltro_Click(object sender, EventArgs e)
+        {
+            this.txtFiltro.Text = "";
+        }
+
+        private void btnFiltrar_Leave(object sender, EventArgs e)
+        {
+
+            this.txtFiltro.Text = "Buscar por correo o por nombre";
         }
     }
 }

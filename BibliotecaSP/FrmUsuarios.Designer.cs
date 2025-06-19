@@ -41,7 +41,7 @@
             dataGridRoles = new DataGridView();
             button1 = new Button();
             button2 = new Button();
-            textBox1 = new TextBox();
+            txtFiltro = new TextBox();
             menuStrip1 = new MenuStrip();
             ((System.ComponentModel.ISupportInitialize)dataGridUsuarios).BeginInit();
             contextMenuStrip1.SuspendLayout();
@@ -121,7 +121,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("SimSun", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(408, 269);
+            label2.Location = new Point(678, 52);
             label2.Name = "label2";
             label2.Size = new Size(64, 19);
             label2.TabIndex = 12;
@@ -132,15 +132,15 @@
             dataGridPermisos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridPermisos.Location = new Point(0, 302);
             dataGridPermisos.Name = "dataGridPermisos";
-            dataGridPermisos.Size = new Size(337, 150);
+            dataGridPermisos.Size = new Size(635, 150);
             dataGridPermisos.TabIndex = 13;
             // 
             // dataGridRoles
             // 
             dataGridRoles.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridRoles.Location = new Point(408, 302);
+            dataGridRoles.Location = new Point(679, 85);
             dataGridRoles.Name = "dataGridRoles";
-            dataGridRoles.Size = new Size(380, 150);
+            dataGridRoles.Size = new Size(227, 367);
             dataGridRoles.TabIndex = 14;
             // 
             // button1
@@ -149,7 +149,7 @@
             button1.Font = new Font("Palatino Linotype", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.Image = Properties.Resources.mas;
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(478, 263);
+            button1.Location = new Point(748, 46);
             button1.Name = "button1";
             button1.Size = new Size(33, 34);
             button1.TabIndex = 15;
@@ -168,19 +168,22 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
-            // textBox1
+            // txtFiltro
             // 
-            textBox1.Location = new Point(0, 51);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(188, 23);
-            textBox1.TabIndex = 17;
-            textBox1.Text = "Buscar";
+            txtFiltro.Location = new Point(0, 51);
+            txtFiltro.Name = "txtFiltro";
+            txtFiltro.Size = new Size(257, 23);
+            txtFiltro.TabIndex = 17;
+            txtFiltro.Text = "Buscar por correo o por nombre";
+            txtFiltro.Click += btnFiltro_Click;
+            txtFiltro.TextChanged += textBox1_TextChanged;
+            txtFiltro.Leave += btnFiltrar_Leave;
             // 
             // menuStrip1
             // 
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 24);
+            menuStrip1.Size = new Size(906, 24);
             menuStrip1.TabIndex = 18;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -188,8 +191,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(textBox1);
+            ClientSize = new Size(906, 450);
+            Controls.Add(txtFiltro);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(dataGridRoles);
@@ -225,7 +228,7 @@
         private DataGridView dataGridRoles;
         private Button button1;
         private Button button2;
-        private TextBox textBox1;
+        private TextBox txtFiltro;
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem toolStripMenuItem2;
         private MenuStrip menuStrip1;

@@ -74,6 +74,28 @@ namespace BibliotecaSP.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _20250619_0128_प्राचीन_कालद्वार_का_रहस्य_simple_compose_01jy3h9q0qfac86k8cwsw55c0j {
+            get {
+                object obj = ResourceManager.GetObject("20250619_0128_प्राचीन कालद्वार का रहस्य_simple_compose_01jy3h9q0qfac86k8cwsw55c0j" +
+                        "", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20250619_0129_Bibliothèque_Universitaire_Ambiance_simple_compose_01jy3hbk8wfqmbpbwdqk7z0d4j {
+            get {
+                object obj = ResourceManager.GetObject("20250619_0129_Bibliothèque Universitaire Ambiance_simple_compose_01jy3hbk8wfqmbpb" +
+                        "wdqk7z0d4j", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap agregar_usuario {
             get {
                 object obj = ResourceManager.GetObject("agregar-usuario", resourceCulture);
