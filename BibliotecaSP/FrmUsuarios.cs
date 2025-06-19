@@ -29,7 +29,7 @@ namespace BibliotecaSP
             this.servicioUsuarios = new ServicioUsuarios();
             this.servicioPantallas = new ServicioPantallas();
             this.servicioPermisosDirectos = new ServicioPermisosDirectos();
-            this.servicioUsuarioRol=new ServicioUsuarioRol();
+            this.servicioUsuarioRol = new ServicioUsuarioRol();
             cargarUsuarios();
         }
         public void cargarUsuarios()
@@ -203,7 +203,7 @@ namespace BibliotecaSP
 
                     cargarGrid<Usuario>(this.dataGridUsuarios, usuariosFiltrados);
                 }
-                
+
             }
         }
 
@@ -216,6 +216,39 @@ namespace BibliotecaSP
         {
 
             this.txtFiltro.Text = "Buscar por correo o por nombre";
+        }
+
+        private void eliminarRol_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (this.dataGridUsuarios.SelectedRows.Count > 0)
+                {
+                    DataGridViewRow filaSeleccionada = dataGridRoles.SelectedRows[0];
+                    var idUsuario = filaSeleccionada.Cells[0].Value.ToString();
+                    var idRol = filaSeleccionada.Cells[1].Value.ToString();
+                    if (idUsuario != null && idRol != null)
+                    {
+                        var respuesta = this.servicioUsuarioRol.Eliminar(int.Parse(idUsuario), int.Parse(idRol));
+                        if (respuesta == "Eliminado correctamente.")
+                        {
+                            cargarRoles(int.Parse(idUsuario));
+                            MessageBox.Show(respuesta);
+                        }
+                        else
+                        {
+                            MessageBox.Show(respuesta);
+                        }
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
     }
 }

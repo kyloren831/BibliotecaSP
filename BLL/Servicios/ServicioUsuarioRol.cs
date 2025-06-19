@@ -51,5 +51,25 @@ namespace BLL.Servicios
                 return lista;
             }
         }
+        public string Eliminar(int IdUsuario, int IdRol)
+        {
+            var temp = _context.UsuarioRoles.FirstOrDefault(x => x.IdUsuario == IdUsuario && x.IdRol == IdRol);
+            if (temp == null) return "Usuario el usuario no tiene este rol";
+            using (var transaccion = _context.Database.BeginTransaction())
+            {
+                try
+                {
+                    _context.UsuarioRoles.Remove(temp);
+                    _context.SaveChanges();
+                    transaccion.Commit();
+                    return  "Eliminado correctamente.";
+                }
+                catch (Exception ex)
+                {
+                    transaccion.Rollback();
+                    return "Error al eliminar usuario" + ex.Message;
+                }
+            }
+        }
     }
 }

@@ -39,6 +39,8 @@
             label2 = new Label();
             dataGridPermisos = new DataGridView();
             dataGridRoles = new DataGridView();
+            MenuStripRol = new ContextMenuStrip(components);
+            btnEliminarRol = new ToolStripMenuItem();
             button1 = new Button();
             button2 = new Button();
             txtFiltro = new TextBox();
@@ -47,6 +49,7 @@
             contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridPermisos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridRoles).BeginInit();
+            MenuStripRol.SuspendLayout();
             SuspendLayout();
             // 
             // lbTitulo
@@ -138,10 +141,24 @@
             // dataGridRoles
             // 
             dataGridRoles.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridRoles.ContextMenuStrip = MenuStripRol;
             dataGridRoles.Location = new Point(679, 85);
             dataGridRoles.Name = "dataGridRoles";
             dataGridRoles.Size = new Size(227, 367);
             dataGridRoles.TabIndex = 14;
+            // 
+            // MenuStripRol
+            // 
+            MenuStripRol.Items.AddRange(new ToolStripItem[] { btnEliminarRol });
+            MenuStripRol.Name = "MenuStripRol";
+            MenuStripRol.Size = new Size(181, 48);
+            // 
+            // btnEliminarRol
+            // 
+            btnEliminarRol.Name = "btnEliminarRol";
+            btnEliminarRol.Size = new Size(180, 22);
+            btnEliminarRol.Text = "Eliminar Rol";
+            btnEliminarRol.Click += eliminarRol_Click;
             // 
             // button1
             // 
@@ -213,6 +230,7 @@
             contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridPermisos).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridRoles).EndInit();
+            MenuStripRol.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -233,5 +251,7 @@
         private ToolStripMenuItem toolStripMenuItem2;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem toolStripMenuItem1;
+        private ContextMenuStrip MenuStripRol;
+        private ToolStripMenuItem btnEliminarRol;
     }
 }
