@@ -21,7 +21,8 @@ namespace DAL.Models
         public string Nombre { get; set; }
         [Column("FECHACREACION")]
         public DateTime FechaCreacion { get; set; }
-
+        public Sistema Sistema { get; set; }
         public List<PermisoUsuario> PermisoUsuarios { get; set; }
+        public List<PermisoRol> PermisosRol { get; set; }
     }
 }

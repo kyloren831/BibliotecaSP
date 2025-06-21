@@ -42,10 +42,6 @@ namespace BLL.Servicios
 
                 lista = query.ToList();
 
-                if (lista.Count == 0) {
-                    MessageBox.Show("Este usuario aun no tiene permisos asignados");
-                    return lista;
-                }
                 return lista;
             }
             catch (Exception ex)
@@ -77,5 +73,64 @@ namespace BLL.Servicios
                 }
             }
         }
+
+        public PermisoUsuario Buscar(int idPantalla, int idUsuario)
+        {
+            var temp = _context.PermisosUsuarios.FirstOrDefault(x=> x.IdPantalla==idPantalla && x.IdUsuario==idUsuario);
+            if (temp != null) return temp;
+            return null;
+        }
+
+        public string Editar(PermisoUsuario permiso)
+        {
+            if (permiso == null) return "Permiso invalido";
+            var temp = _context.PermisosUsuarios.FirstOrDefault(x => x.IdUsuario == permiso.IdUsuario && x.IdPantalla == permiso.IdPantalla);
+            if (temp == null) return "Permiso no encontrado. Intenge Agregarlo...";
+
+            using (var transaccion = _context.Database.BeginTransaction())
+            {
+                try
+                {
+                    temp.IdPantalla = permiso.IdPantalla;
+                    temp.IdUsuario = permiso.IdUsuario;
+                    temp.Insertar = permiso.Insertar;
+                    temp.Modificar = permiso.Modificar;
+                    temp.Borrar = permiso.Borrar;
+                    temp.Consultar = permiso.Consultar;
+
+                    _context.PermisosUsuarios.Update(temp);
+                    _context.SaveChanges();
+                    transaccion.Commit();
+                    return "Editado correctamente.";
+                }
+                catch (Exception ex)
+                {
+                    transaccion.Rollback();
+                    return "Error al editar permisos" + ex.Message;
+                }
+            }
+        }
+        public string Eliminar(int IdUsuario, int IdPantalla)
+        {
+            var temp = _context.PermisosUsuarios.FirstOrDefault(x => x.IdUsuario ==  IdUsuario && x.IdPantalla == IdPantalla);
+            if (temp == null) return "Permisos no encontrados";
+            using (var transaccion = _context.Database.BeginTransaction())
+            {
+                try
+                {
+                    _context.PermisosUsuarios.Remove(temp);
+                    _context.SaveChanges();
+                    transaccion.Commit();
+                    return"Eliminado correctamente.";
+                }
+                catch (Exception ex)
+                {
+                    transaccion.Rollback();
+                    return "Error al eliminar permisos" + ex.Message;
+                }
+            }
+        }
+
+       
     }
 }

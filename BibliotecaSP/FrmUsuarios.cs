@@ -153,22 +153,31 @@ namespace BibliotecaSP
         {
             try
             {
-                var usuarios = servicioUsuarios.ListarUsuarios();
                 var pantallas = servicioPantallas.ListarPantallas();
-                if (usuarios != null && pantallas != null)
+                if (pantallas != null)
                 {
-                    List<string> idsPantallas = new List<string>();
-                    List<string> idsUsuarios = new List<string>();
-                    foreach (var item in usuarios)
+                    if (this.dataGridUsuarios.SelectedRows.Count > 0)
                     {
-                        idsUsuarios.Add(item.IdUsuario.ToString());
+                        List<string> idsPantallas = new List<string>();
+
+                        var idUsuario = dataGridUsuarios.SelectedRows[0].Cells[0].Value.ToString();
+
+                        if (!string.IsNullOrEmpty(idUsuario))
+                        {
+
+                            foreach (var item in pantallas)
+                            {
+                                idsPantallas.Add(item.IdPantalla.ToString());
+                            }
+                            FrmPermisoUsuario frm = new FrmPermisoUsuario(this, this.servicioPermisosDirectos, idsPantallas, idUsuario);
+                            frm.ShowDialog();
+                        }
                     }
-                    foreach (var item in pantallas)
+                    else
                     {
-                        idsPantallas.Add(item.IdPantalla.ToString());
+                        MessageBox.Show("Seleccione un usuario");
                     }
-                    FrmPermisoUsuario frm = new FrmPermisoUsuario(this, this.servicioPermisosDirectos, idsPantallas, idsUsuarios);
-                    frm.ShowDialog();
+
                 }
                 else
                 {
@@ -222,7 +231,7 @@ namespace BibliotecaSP
         {
             try
             {
-                if (this.dataGridUsuarios.SelectedRows.Count > 0)
+                if (this.dataGridUsuarios.SelectedRows.Count > 0 && this.dataGridRoles.SelectedRows.Count > 0)
                 {
                     DataGridViewRow filaSeleccionada = dataGridRoles.SelectedRows[0];
                     var idUsuario = filaSeleccionada.Cells[0].Value.ToString();
@@ -242,12 +251,129 @@ namespace BibliotecaSP
                     }
 
                 }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar una fila...");
+                }
+
 
             }
             catch (Exception ex)
             {
 
                 throw ex;
+            }
+        }
+
+        private void editarPermiso_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (this.dataGridUsuarios.SelectedRows.Count > 0 && this.dataGridPermisos.SelectedRows.Count > 0)
+                {
+                    DataGridViewRow filaSeleccionada = dataGridPermisos.SelectedRows[0];
+                    var idUsuario = filaSeleccionada.Cells[0].Value.ToString();
+                    var idPantalla = filaSeleccionada.Cells[1].Value.ToString();
+                    if (idUsuario != null && idPantalla != null)
+                    {
+                        var respuesta = this.servicioPermisosDirectos.Buscar(int.Parse(idPantalla), int.Parse(idUsuario));
+                        if (respuesta != null)
+                        {
+                            List<string> idsPantallas = new List<string>();
+
+                            idsPantallas.Add(respuesta.IdPantalla.ToString());
+
+                            FrmPermisoUsuario frm = new FrmPermisoUsuario(this, this.servicioPermisosDirectos, idsPantallas, respuesta);
+                            frm.ShowDialog();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario no encontrado");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar una fila...");
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+
+        private void eliminarPermiso_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (this.dataGridUsuarios.SelectedRows.Count > 0 && this.dataGridPermisos.SelectedRows.Count > 0)
+                {
+                    DataGridViewRow filaSeleccionada = dataGridPermisos.SelectedRows[0];
+                    var idUsuario = filaSeleccionada.Cells[0].Value.ToString();
+                    var idPantalla = filaSeleccionada.Cells[1].Value.ToString();
+                    if (idUsuario != null && idPantalla != null)
+                    {
+                        if (MessageBox.Show("¿Desea eliminar los permisos de la pantalla " + idPantalla + "?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+
+                            var respuesta = this.servicioPermisosDirectos.Eliminar(int.Parse(idUsuario), int.Parse(idPantalla));
+                            if (respuesta == "Eliminado correctamente.")
+                            {
+                                cargarPermisos(int.Parse(idUsuario));
+                                MessageBox.Show(respuesta);
+                            }
+                            else
+                            {
+                                MessageBox.Show(respuesta);
+                            }
+                        }
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar una fila...");
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (this.dataGridUsuarios.SelectedRows.Count > 0 )
+                {
+                    DataGridViewRow filaSeleccionada = dataGridUsuarios.SelectedRows[0];
+                    var idUsuario = filaSeleccionada.Cells[0].Value.ToString();
+                    if (idUsuario != null)
+                    {
+                            FrmAsignarRol frm = new FrmAsignarRol(this,idUsuario, this.servicioUsuarioRol);
+                            frm.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario no encontrado");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar una fila...");
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
     }

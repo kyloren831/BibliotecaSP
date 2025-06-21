@@ -98,14 +98,7 @@ namespace BibliotecaSP
             btnSistemas.BackColor = Color.FromArgb(255, 255, 192);
         }
 
-        private void btnPantallas_Enter(object sender, EventArgs e)
-        {
-            btnPantallas.BackColor = Color.FromArgb(224, 218, 143);
-        }
-        private void btnPantallas_Leave(object sender, EventArgs e)
-        {
-            btnPantallas.BackColor = Color.FromArgb(255, 255, 192);
-        }
+
 
         private void btnRoles_Enter(object sender, EventArgs e)
         {
@@ -114,6 +107,21 @@ namespace BibliotecaSP
         private void btnRoles_Leave(object sender, EventArgs e)
         {
             btnRoles.BackColor = Color.FromArgb(255, 255, 192);
+        }
+
+        private void btnSistemas_Click(object sender, EventArgs e)
+        {
+            FrmSistemas frm = new FrmSistemas();
+            //frm.Show();
+            this.AbrirFormulario(frm);
+        }
+
+        private void btnRoles_Click(object sender, EventArgs e)
+        {
+            FrmRoles frm = new FrmRoles();
+            //frm.Show();
+            this.AbrirFormulario(frm);
+
         }
     }
 }

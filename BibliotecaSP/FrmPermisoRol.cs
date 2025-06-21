@@ -4,97 +4,89 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Media.Animation;
 using BLL.Servicios;
 using DAL.Models;
 
 namespace BibliotecaSP
 {
-    public partial class FrmPermisoUsuario : Form
+    public partial class FrmPermisoRol : Form
     {
-        private ServicioPermisosDirectos servicioPermisosDirectos;
 
-        private FrmRoles FrmRoles { get; }
         private ServicioPermisosRol servicioPermisosRol { get; }
-
-        private FrmUsuarios frmUsuarios;
+        private FrmRoles frmRoles;
         private string ID;
         private List<string> idsPantallas;
-        private PermisoUsuario? PermisoUsuario;
+        private PermisoRol? PermisoRol;
 
-        public PermisoRol? PermisoRol { get; }
 
-        public FrmPermisoUsuario(FrmUsuarios frmUsuarios,ServicioPermisosDirectos servicioPermisosDirectos, List<string> idsPantallas, string idsUsuarios)
+        public FrmPermisoRol(FrmRoles frmRoles, ServicioPermisosRol servicioPermisosRol, List<string> idsPantallas, string IdRol)
         {
             InitializeComponent();
-            this.servicioPermisosDirectos = servicioPermisosDirectos;
+            this.servicioPermisosRol = servicioPermisosRol;
             this.idsPantallas = idsPantallas;
-            this.ID = idsUsuarios;
-            this.frmUsuarios = frmUsuarios;
+            this.ID = IdRol;
+            this.frmRoles = frmRoles;
             aparienciaCheks();
         }
-        public FrmPermisoUsuario(FrmUsuarios frmUsuarios, ServicioPermisosDirectos servicioPermisosDirectos, List<string> idsPantallas, PermisoUsuario permisoUsuario )
+        public FrmPermisoRol(FrmRoles frmRoles, ServicioPermisosRol servicioPermisosRol, List<string> idsPantallas, PermisoRol PermisoRol)
         {
             InitializeComponent();
             this.lbTitulo.Text = "Editar permisos";
-            this.servicioPermisosDirectos = servicioPermisosDirectos;
+            this.servicioPermisosRol = servicioPermisosRol;
             this.idsPantallas = idsPantallas;
-            this.PermisoUsuario = permisoUsuario;
-            this.frmUsuarios = frmUsuarios;
+            this.PermisoRol = PermisoRol;
+            this.frmRoles = frmRoles;
             aparienciaCheks();
             cargarPermisos();
         }
-
-        
-
         private void cargarPermisos()
         {
-            if (PermisoUsuario != null ) {
+            if (PermisoRol != null)
+            {
 
-                if (PermisoUsuario.Insertar == 'S')
+                if (PermisoRol.Insertar == 'S')
                 {
                     this.checkInsertar.Checked = true;
                     this.checkInsertar.Text = "Activado";
                     this.checkInsertar.BackColor = Color.Green;
                 }
-                else 
+                else
                 {
                     this.checkInsertar.Text = "Desactivado";
                     this.checkInsertar.BackColor = Color.Gray;
                 }
-                if (PermisoUsuario.Modificar == 'S')
+                if (PermisoRol.Modificar == 'S')
                 {
                     this.checkModificar.Checked = true;
                     this.checkInsertar.Text = "Activado";
                     this.checkModificar.BackColor = Color.Green;
                 }
-                else 
+                else
                 {
                     this.checkModificar.Text = "Desactivado";
                     this.checkModificar.BackColor = Color.Gray;
                 }
-                if (PermisoUsuario.Borrar == 'S' )
+                if (PermisoRol.Borrar == 'S')
                 {
-                    this.checkBorrar.Checked = true; 
+                    this.checkBorrar.Checked = true;
                     this.checkBorrar.Text = "Activado";
                     this.checkBorrar.BackColor = Color.Green;
                 }
-                else 
+                else
                 {
                     this.checkBorrar.Text = "Desactivado";
                     this.checkBorrar.BackColor = Color.Gray;
                 }
-                if (PermisoUsuario.Consultar == 'S' )
+                if (PermisoRol.Consultar == 'S')
                 {
                     this.checkConsultar.Checked = true;
                     this.checkConsultar.Text = "Activado";
                     this.checkConsultar.BackColor = Color.Green;
                 }
-                else 
+                else
                 {
                     this.checkConsultar.Text = "Desactivado";
                     this.checkConsultar.BackColor = Color.Gray;
@@ -105,21 +97,22 @@ namespace BibliotecaSP
         }
         private void cargarCombos()
         {
-            if(this.PermisoUsuario!= null)
+            if (this.PermisoRol != null)
             {
-                this.ID = PermisoUsuario.IdUsuario.ToString();
-                this.lbID.Text = "ID Usuario";
+                this.ID = PermisoRol.IdRol.ToString();
+                this.lbID.Text = "ID Rol: ";
+
             }
-            
-            this.lbIdUsuario.Text= ID;
-            
+
+            this.lbIdUsuario.Text = ID;
+
             foreach (var item in idsPantallas)
             {
                 this.comboIdPantalla.Items.Add(item);
             }
             comboIdPantalla.SelectedIndex = 0;
         }
-        private void FrmPermisoUsuario_Load(object sender, EventArgs e)
+        private void FrmPermisoRol_Load(object sender, EventArgs e)
         {
             cargarCombos();
             eventoCheks();
@@ -153,7 +146,7 @@ namespace BibliotecaSP
         }
         private void eventoCheks()
         {
-            
+
             this.checkInsertar.CheckedChanged += (s, ev) =>
             {
                 if (this.checkInsertar.Checked)
@@ -167,7 +160,7 @@ namespace BibliotecaSP
                     this.checkInsertar.BackColor = Color.Gray;
                 }
             };
-           
+
             this.checkModificar.CheckedChanged += (s, ev) =>
             {
                 if (this.checkModificar.Checked)
@@ -211,41 +204,15 @@ namespace BibliotecaSP
             };
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void AgregarPermisoRol()
         {
-            this.Close();
-        }
-
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        
-        private void btnConfirmar_Click(object sender, EventArgs e)
-        {
-
-            if(this.PermisoUsuario == null && this.frmUsuarios != null)
-            {
-                Agregar();
-            }
-            else if(this.PermisoUsuario != null && this.frmUsuarios != null)
-            {
-                Editar();
-            } 
-        }
-
-       
-
-        public void Agregar()
-        {
-            var permiso =(PermisoUsuario) this.GetPermisoUsuario();
+            var permiso = this.GetPermisos();
             if (permiso != null)
             {
-                var respuesta = servicioPermisosDirectos.Agregar(permiso);
+                var respuesta = servicioPermisosRol.Agregar(permiso);
                 if (respuesta == "Agregado correctamente.")
                 {
-                    this.frmUsuarios.cargarPermisos(permiso.IdUsuario);
+                    this.frmRoles.cargarPermisos(permiso.IdRol);
                     MessageBox.Show(respuesta);
                     this.Close();
                 }
@@ -255,14 +222,15 @@ namespace BibliotecaSP
                 }
             }
         }
-        private void Editar()
+
+        private void EditarPermisoRol()
         {
-            var permisoEditado =  this.GetPermisoUsuario();
-            var respuesta = this.servicioPermisosDirectos.Editar(permisoEditado);
+            var permisoEditado = this.GetPermisos();
+            var respuesta = this.servicioPermisosRol.Editar(permisoEditado);
 
             if (respuesta == "Editado correctamente.")
             {
-                this.frmUsuarios.cargarPermisos(permisoEditado.IdUsuario);
+                this.frmRoles.cargarPermisos(permisoEditado.IdRol);
                 MessageBox.Show(respuesta);
                 this.Close();
             }
@@ -271,7 +239,7 @@ namespace BibliotecaSP
                 MessageBox.Show(respuesta);
             }
         }
-        public PermisoUsuario GetPermisoUsuario()
+        public PermisoRol GetPermisos()
         {
             string Id = this.lbIdUsuario.Text;
             string IdPantalla = this.comboIdPantalla.SelectedItem.ToString();
@@ -296,18 +264,39 @@ namespace BibliotecaSP
             {
                 Consultar = 'N';
             }
-                return new PermisoUsuario
-                {
-                    IdUsuario = int.Parse(Id),
-                    IdPantalla = int.Parse(IdPantalla),
-                    Insertar = Insertar,
-                    Modificar = Modificar,
-                    Borrar = Borrar,
-                    Consultar = Consultar,
-                    FechaCreacion = DateTime.Now
-                };
-           
-           
+            return new PermisoRol
+            {
+                IdRol = int.Parse(Id),
+                IdPantalla = int.Parse(IdPantalla),
+                Insertar = Insertar,
+                Modificar = Modificar,
+                Borrar = Borrar,
+                Consultar = Consultar,
+                FechaCreacion = DateTime.Now
+            };
+
+
+        }
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            if (this.PermisoRol == null)
+            {
+                AgregarPermisoRol();
+            }
+            else
+            {
+                EditarPermisoRol();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

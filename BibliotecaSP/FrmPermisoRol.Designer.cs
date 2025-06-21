@@ -1,0 +1,303 @@
+﻿namespace BibliotecaSP
+{
+    partial class FrmPermisoRol
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            lbIdUsuario = new Label();
+            panel2 = new Panel();
+            checkConsultar = new CheckBox();
+            checkBorrar = new CheckBox();
+            checkModificar = new CheckBox();
+            checkInsertar = new CheckBox();
+            lbInsertar = new Label();
+            label6 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            comboIdPantalla = new ComboBox();
+            label3 = new Label();
+            lbID = new Label();
+            lbTitulo = new Label();
+            btnConfirmar = new Button();
+            button1 = new Button();
+            panel1 = new Panel();
+            label2 = new Label();
+            label1 = new Label();
+            panel2.SuspendLayout();
+            panel1.SuspendLayout();
+            SuspendLayout();
+            // 
+            // lbIdUsuario
+            // 
+            lbIdUsuario.AutoSize = true;
+            lbIdUsuario.Font = new Font("MS PGothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbIdUsuario.Location = new Point(146, 124);
+            lbIdUsuario.Name = "lbIdUsuario";
+            lbIdUsuario.Size = new Size(67, 13);
+            lbIdUsuario.TabIndex = 49;
+            lbIdUsuario.Text = "ID Usuario:";
+            // 
+            // panel2
+            // 
+            panel2.BorderStyle = BorderStyle.Fixed3D;
+            panel2.Controls.Add(checkConsultar);
+            panel2.Controls.Add(checkBorrar);
+            panel2.Controls.Add(checkModificar);
+            panel2.Controls.Add(checkInsertar);
+            panel2.Controls.Add(lbInsertar);
+            panel2.Controls.Add(label6);
+            panel2.Controls.Add(label4);
+            panel2.Controls.Add(label5);
+            panel2.Location = new Point(101, 161);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(287, 144);
+            panel2.TabIndex = 48;
+            // 
+            // checkConsultar
+            // 
+            checkConsultar.AutoSize = true;
+            checkConsultar.Location = new Point(174, 109);
+            checkConsultar.Name = "checkConsultar";
+            checkConsultar.Size = new Size(83, 19);
+            checkConsultar.TabIndex = 42;
+            checkConsultar.Text = "checkBox4";
+            checkConsultar.UseVisualStyleBackColor = true;
+            // 
+            // checkBorrar
+            // 
+            checkBorrar.AutoSize = true;
+            checkBorrar.Location = new Point(174, 76);
+            checkBorrar.Name = "checkBorrar";
+            checkBorrar.Size = new Size(83, 19);
+            checkBorrar.TabIndex = 41;
+            checkBorrar.Text = "checkBox3";
+            checkBorrar.UseVisualStyleBackColor = true;
+            // 
+            // checkModificar
+            // 
+            checkModificar.AutoSize = true;
+            checkModificar.Location = new Point(174, 43);
+            checkModificar.Name = "checkModificar";
+            checkModificar.Size = new Size(83, 19);
+            checkModificar.TabIndex = 40;
+            checkModificar.Text = "checkBox2";
+            checkModificar.UseVisualStyleBackColor = true;
+            // 
+            // checkInsertar
+            // 
+            checkInsertar.AutoSize = true;
+            checkInsertar.Location = new Point(174, 12);
+            checkInsertar.Name = "checkInsertar";
+            checkInsertar.Size = new Size(83, 19);
+            checkInsertar.TabIndex = 39;
+            checkInsertar.Text = "checkBox1";
+            checkInsertar.UseVisualStyleBackColor = true;
+            // 
+            // lbInsertar
+            // 
+            lbInsertar.AutoSize = true;
+            lbInsertar.Font = new Font("SimSun", 12F, FontStyle.Bold);
+            lbInsertar.Location = new Point(22, 11);
+            lbInsertar.Name = "lbInsertar";
+            lbInsertar.Size = new Size(79, 16);
+            lbInsertar.TabIndex = 35;
+            lbInsertar.Text = "Insertar";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("SimSun", 12F, FontStyle.Bold);
+            label6.Location = new Point(22, 112);
+            label6.Name = "label6";
+            label6.Size = new Size(88, 16);
+            label6.TabIndex = 38;
+            label6.Text = "Consultar";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("SimSun", 12F, FontStyle.Bold);
+            label4.Location = new Point(22, 46);
+            label4.Name = "label4";
+            label4.Size = new Size(88, 16);
+            label4.TabIndex = 36;
+            label4.Text = "Modificar";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("SimSun", 12F, FontStyle.Bold);
+            label5.Location = new Point(22, 79);
+            label5.Name = "label5";
+            label5.Size = new Size(106, 16);
+            label5.TabIndex = 37;
+            label5.Text = "Borrar     ";
+            // 
+            // comboIdPantalla
+            // 
+            comboIdPantalla.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboIdPantalla.FormattingEnabled = true;
+            comboIdPantalla.Location = new Point(389, 114);
+            comboIdPantalla.Name = "comboIdPantalla";
+            comboIdPantalla.Size = new Size(74, 23);
+            comboIdPantalla.TabIndex = 47;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("SimSun", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(242, 118);
+            label3.Name = "label3";
+            label3.Size = new Size(141, 19);
+            label3.TabIndex = 46;
+            label3.Text = "ID Pantalla:";
+            // 
+            // lbID
+            // 
+            lbID.AutoSize = true;
+            lbID.Font = new Font("SimSun", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbID.Location = new Point(54, 119);
+            lbID.Name = "lbID";
+            lbID.Size = new Size(86, 19);
+            lbID.TabIndex = 45;
+            lbID.Text = "ID Rol:";
+            // 
+            // lbTitulo
+            // 
+            lbTitulo.AutoSize = true;
+            lbTitulo.Font = new Font("SimSun", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbTitulo.Location = new Point(136, 53);
+            lbTitulo.Name = "lbTitulo";
+            lbTitulo.Size = new Size(218, 24);
+            lbTitulo.TabIndex = 44;
+            lbTitulo.Text = "Agregar Permisos";
+            // 
+            // btnConfirmar
+            // 
+            btnConfirmar.BackColor = Color.FromArgb(255, 255, 192);
+            btnConfirmar.Font = new Font("Palatino Linotype", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnConfirmar.Location = new Point(277, 337);
+            btnConfirmar.Name = "btnConfirmar";
+            btnConfirmar.Size = new Size(111, 38);
+            btnConfirmar.TabIndex = 43;
+            btnConfirmar.Text = "Confirmar";
+            btnConfirmar.UseVisualStyleBackColor = false;
+            btnConfirmar.Click += btnConfirmar_Click;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(255, 192, 192);
+            button1.Font = new Font("Palatino Linotype", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Location = new Point(107, 337);
+            button1.Name = "button1";
+            button1.Size = new Size(111, 38);
+            button1.TabIndex = 42;
+            button1.Text = "Cancelar";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Khaki;
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(517, 30);
+            panel1.TabIndex = 41;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("SimSun", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(21, 9);
+            label2.Name = "label2";
+            label2.Size = new Size(61, 12);
+            label2.TabIndex = 50;
+            label2.Text = "Permisos";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("MV Boli", 15.75F, FontStyle.Bold);
+            label1.Location = new Point(486, 2);
+            label1.Name = "label1";
+            label1.Size = new Size(28, 28);
+            label1.TabIndex = 10;
+            label1.Text = "X";
+            label1.Click += label1_Click;
+            // 
+            // FrmPermisoRol
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(517, 398);
+            Controls.Add(lbIdUsuario);
+            Controls.Add(panel2);
+            Controls.Add(comboIdPantalla);
+            Controls.Add(label3);
+            Controls.Add(lbID);
+            Controls.Add(lbTitulo);
+            Controls.Add(btnConfirmar);
+            Controls.Add(button1);
+            Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "FrmPermisoRol";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "FrmPermisoRol";
+            Load += FrmPermisoRol_Load;
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private Label lbIdUsuario;
+        private Panel panel2;
+        private CheckBox checkConsultar;
+        private CheckBox checkBorrar;
+        private CheckBox checkModificar;
+        private CheckBox checkInsertar;
+        private Label lbInsertar;
+        private Label label6;
+        private Label label4;
+        private Label label5;
+        private ComboBox comboIdPantalla;
+        private Label label3;
+        private Label lbID;
+        private Label lbTitulo;
+        private Button btnConfirmar;
+        private Button button1;
+        private Panel panel1;
+        private Label label1;
+        private Label label2;
+    }
+}

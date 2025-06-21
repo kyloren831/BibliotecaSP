@@ -18,7 +18,7 @@ namespace BLL.Servicios
         {
             this._context = new DbContextBiblioteca();
         }
-
+       
         public List <UsuarioRolDTO> Listar(int id)
         {
             var lista = new List<UsuarioRolDTO>();
@@ -38,23 +38,42 @@ namespace BLL.Servicios
 
                 lista = query.ToList();
 
-                if (lista.Count == 0)
-                {
-                    MessageBox.Show("Este usuario aun no tiene roles asignados");
-                    return lista;
-                }
+                
                 return lista;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error buscando permisos del usuario" + ex.Message);
+                MessageBox.Show("Error buscando roles del usuario" + ex.Message);
                 return lista;
+            }
+        }
+
+        public string Agregar(UsuarioRol usuarioRol)
+        {
+            if (usuarioRol == null) return "Rol invalido";
+            var temp = _context.UsuarioRoles.FirstOrDefault(x => x.IdUsuario == usuarioRol.IdUsuario && x.IdRol == usuarioRol.IdRol);
+            if (temp != null) return "Usuario con el rol asignado previamente";
+
+            using (var transaccion = _context.Database.BeginTransaction())
+            {
+                try
+                {
+                    _context.UsuarioRoles.Add(usuarioRol);
+                    _context.SaveChanges();
+                    transaccion.Commit();
+                    return "Agregado correctamente.";
+                }
+                catch (Exception ex)
+                {
+                    transaccion.Rollback();
+                    return "Error al asignar rol" + ex.Message;
+                }
             }
         }
         public string Eliminar(int IdUsuario, int IdRol)
         {
             var temp = _context.UsuarioRoles.FirstOrDefault(x => x.IdUsuario == IdUsuario && x.IdRol == IdRol);
-            if (temp == null) return "Usuario el usuario no tiene este rol";
+            if (temp == null) return "El usuario no tiene este rol";
             using (var transaccion = _context.Database.BeginTransaction())
             {
                 try
@@ -67,7 +86,7 @@ namespace BLL.Servicios
                 catch (Exception ex)
                 {
                     transaccion.Rollback();
-                    return "Error al eliminar usuario" + ex.Message;
+                    return "Error al eliminar rol" + ex.Message;
                 }
             }
         }

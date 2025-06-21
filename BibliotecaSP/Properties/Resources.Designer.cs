@@ -96,6 +96,132 @@ namespace BibliotecaSP.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _20250619_1738_Gestión_de_Biblioteca_simple_compose_01jy58vrm0egxt6rnn4abnf5c2 {
+            get {
+                object obj = ResourceManager.GetObject("20250619_1738_Gestión de Biblioteca_simple_compose_01jy58vrm0egxt6rnn4abnf5c2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20250619_1749_Chiaroscuro_Hands_and_Book_simple_compose_01jy59hejjfcrrp61rgthtw42h {
+            get {
+                object obj = ResourceManager.GetObject("20250619_1749_Chiaroscuro Hands and Book_simple_compose_01jy59hejjfcrrp61rgthtw42" +
+                        "h", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20250619_1755_Hands_with_Vintage_Book_simple_compose_01jy59vh2fe74tmzr7xabst5q6 {
+            get {
+                object obj = ResourceManager.GetObject("20250619_1755_Hands with Vintage Book_simple_compose_01jy59vh2fe74tmzr7xabst5q6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20250619_1936_Bok_simple_compose_01jy5fnx3rfv9rgf209ay5hrb4 {
+            get {
+                object obj = ResourceManager.GetObject("20250619_1936_Bok_simple_compose_01jy5fnx3rfv9rgf209ay5hrb4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20250619_1951_Fachada_Biblioteca_Pública_simple_compose_01jy5gg6e6fyrtwhkr97qn6tnb {
+            get {
+                object obj = ResourceManager.GetObject("20250619_1951_Fachada Biblioteca Pública_simple_compose_01jy5gg6e6fyrtwhkr97qn6tn" +
+                        "b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20250619_1951_Fachada_Biblioteca_Pública_simple_compose_01jy5gg6e6fyrtwhkr97qn6tnb1 {
+            get {
+                object obj = ResourceManager.GetObject("20250619_1951_Fachada Biblioteca Pública_simple_compose_01jy5gg6e6fyrtwhkr97qn6tn" +
+                        "b1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20250619_1953_Bibliotecario_en_Computadora_simple_compose_01jy5gjgche41b3eraw4fd23g3 {
+            get {
+                object obj = ResourceManager.GetObject("20250619_1953_Bibliotecario en Computadora_simple_compose_01jy5gjgche41b3eraw4fd2" +
+                        "3g3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20250619_1953_Bibliotecario_en_Computadora_simple_compose_01jy5gjgche41b3eraw4fd23g31 {
+            get {
+                object obj = ResourceManager.GetObject("20250619_1953_Bibliotecario en Computadora_simple_compose_01jy5gjgche41b3eraw4fd2" +
+                        "3g31", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20250620_1146_Roles_en_la_Biblioteca_simple_compose_01jy772z15ed1ax56r8qh9xa68 {
+            get {
+                object obj = ResourceManager.GetObject("20250620_1146_Roles en la Biblioteca_simple_compose_01jy772z15ed1ax56r8qh9xa68", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20250621_0124_Swiss_Valley_Serenity_simple_compose_01jy8nyr3cefjbs8gw2grpky77 {
+            get {
+                object obj = ResourceManager.GetObject("20250621_0124_Swiss Valley Serenity_simple_compose_01jy8nyr3cefjbs8gw2grpky77", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20250621_0129_Chica_y_Reloj_Mental_simple_compose_01jy8p6pazfcash0r01ym9f5z0 {
+            get {
+                object obj = ResourceManager.GetObject("20250621_0129_Chica y Reloj Mental_simple_compose_01jy8p6pazfcash0r01ym9f5z0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20250621_0129_Curious_Alice_in_Wonderland_simple_compose_01jy8p8rz0fkpswph82cf23cyn {
+            get {
+                object obj = ResourceManager.GetObject("20250621_0129_Curious Alice in Wonderland_simple_compose_01jy8p8rz0fkpswph82cf23c" +
+                        "yn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap agregar_usuario {
             get {
                 object obj = ResourceManager.GetObject("agregar-usuario", resourceCulture);

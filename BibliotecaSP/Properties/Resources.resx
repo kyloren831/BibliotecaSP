@@ -118,55 +118,91 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="20250619_1936_Bok_simple_compose_01jy5fnx3rfv9rgf209ay5hrb4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20250619_1936_Bok_simple_compose_01jy5fnx3rfv9rgf209ay5hrb4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="20250619_1951_Fachada Biblioteca Pública_simple_compose_01jy5gg6e6fyrtwhkr97qn6tnb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20250619_1951_Fachada Biblioteca Pública_simple_compose_01jy5gg6e6fyrtwhkr97qn6tnb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="20250621_0124_Swiss Valley Serenity_simple_compose_01jy8nyr3cefjbs8gw2grpky77" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20250621_0124_Swiss Valley Serenity_simple_compose_01jy8nyr3cefjbs8gw2grpky77.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="enterprise" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\enterprise.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="equipo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\equipo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="20250617_2318_Gestión de Usuarios Biblioteca_simple_compose_01jy0qfy15fwxseab79v400gv2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\20250617_2318_Gestión de Usuarios Biblioteca_simple_compose_01jy0qfy15fwxseab79v400gv2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="expandir-pantalla" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\expandir-pantalla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="signo-de-mas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\signo-de-mas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="informatica (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\informatica (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="informatica" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\informatica.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="anadir (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\anadir (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="biblioteca-en-linea (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\biblioteca-en-linea (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="agregar-usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agregar-usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sistemas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sistemas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="20250619_1951_Fachada Biblioteca Pública_simple_compose_01jy5gg6e6fyrtwhkr97qn6tnb1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20250619_1951_Fachada Biblioteca Pública_simple_compose_01jy5gg6e6fyrtwhkr97qn6tnb1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="20250619_0128_प्राचीन कालद्वार का रहस्य_simple_compose_01jy3h9q0qfac86k8cwsw55c0j" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\20250619_0128_प्राचीन कालद्वार का रहस्य_simple_compose_01jy3h9q0qfac86k8cwsw55c0j.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="anadir (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\anadir (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="anadir" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\anadir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="informatica (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\informatica (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="biblioteca-publica" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\biblioteca-publica.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="20250619_0129_Bibliothèque Universitaire Ambiance_simple_compose_01jy3hbk8wfqmbpbwdqk7z0d4j" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20250619_0129_Bibliothèque Universitaire Ambiance_simple_compose_01jy3hbk8wfqmbpbwdqk7z0d4j.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="signo-de-mas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\signo-de-mas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="biblioteca-en-linea" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\biblioteca-en-linea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="20250619_0129_Bibliothèque Universitaire Ambiance_simple_compose_01jy3hbk8wfqmbpbwdqk7z0d4j" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\20250619_0129_Bibliothèque Universitaire Ambiance_simple_compose_01jy3hbk8wfqmbpbwdqk7z0d4j.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="20250620_1146_Roles en la Biblioteca_simple_compose_01jy772z15ed1ax56r8qh9xa68" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20250620_1146_Roles en la Biblioteca_simple_compose_01jy772z15ed1ax56r8qh9xa68.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="20250619_1738_Gestión de Biblioteca_simple_compose_01jy58vrm0egxt6rnn4abnf5c2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20250619_1738_Gestión de Biblioteca_simple_compose_01jy58vrm0egxt6rnn4abnf5c2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="equipo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\equipo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="20250619_0128_प्राचीन कालद्वार का रहस्य_simple_compose_01jy3h9q0qfac86k8cwsw55c0j" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20250619_0128_प्राचीन कालद्वार का रहस्य_simple_compose_01jy3h9q0qfac86k8cwsw55c0j.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="biblioteca-publica" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\biblioteca-publica.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="20250619_1953_Bibliotecario en Computadora_simple_compose_01jy5gjgche41b3eraw4fd23g3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20250619_1953_Bibliotecario en Computadora_simple_compose_01jy5gjgche41b3eraw4fd23g3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="20250619_1749_Chiaroscuro Hands and Book_simple_compose_01jy59hejjfcrrp61rgthtw42h" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20250619_1749_Chiaroscuro Hands and Book_simple_compose_01jy59hejjfcrrp61rgthtw42h.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="20250617_2318_Gestión de Usuarios Biblioteca_simple_compose_01jy0qfy15fwxseab79v400gv2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20250617_2318_Gestión de Usuarios Biblioteca_simple_compose_01jy0qfy15fwxseab79v400gv2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="informatica" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\informatica.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sistemas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sistemas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="20250619_1953_Bibliotecario en Computadora_simple_compose_01jy5gjgche41b3eraw4fd23g31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20250619_1953_Bibliotecario en Computadora_simple_compose_01jy5gjgche41b3eraw4fd23g31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="expandir-pantalla" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\expandir-pantalla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="anadir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\anadir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="20250619_1755_Hands with Vintage Book_simple_compose_01jy59vh2fe74tmzr7xabst5q6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20250619_1755_Hands with Vintage Book_simple_compose_01jy59vh2fe74tmzr7xabst5q6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="biblioteca-en-linea (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\biblioteca-en-linea (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="20250621_0129_Curious Alice in Wonderland_simple_compose_01jy8p8rz0fkpswph82cf23cyn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20250621_0129_Curious Alice in Wonderland_simple_compose_01jy8p8rz0fkpswph82cf23cyn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="20250621_0129_Chica y Reloj Mental_simple_compose_01jy8p6pazfcash0r01ym9f5z0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20250621_0129_Chica y Reloj Mental_simple_compose_01jy8p6pazfcash0r01ym9f5z0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

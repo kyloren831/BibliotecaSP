@@ -30,6 +30,7 @@
         {
             label1 = new Label();
             panel1 = new Panel();
+            label7 = new Label();
             lbTitulo = new Label();
             label2 = new Label();
             panel2 = new Panel();
@@ -71,11 +72,23 @@
             // panel1
             // 
             panel1.BackColor = Color.Khaki;
+            panel1.Controls.Add(label7);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(1114, 30);
             panel1.TabIndex = 1;
+            panel1.Paint += panel1_Paint;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("SimSun", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.Location = new Point(12, 9);
+            label7.Name = "label7";
+            label7.Size = new Size(110, 12);
+            label7.TabIndex = 48;
+            label7.Text = "Agregar Usuario";
             // 
             // lbTitulo
             // 
@@ -181,7 +194,7 @@
             pictureBox2.Image = Properties.Resources._20250617_2318_Gestión_de_Usuarios_Biblioteca_simple_compose_01jy0qfy15fwxseab79v400gv2;
             pictureBox2.Location = new Point(613, 33);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(501, 484);
+            pictureBox2.Size = new Size(501, 523);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 14;
             pictureBox2.TabStop = false;
@@ -296,7 +309,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1112, 517);
+            ClientSize = new Size(1112, 555);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(comboActivo);
@@ -352,5 +365,6 @@
         private ComboBox comboActivo;
         private Button button1;
         private Button button2;
+        private Label label7;
     }
 }

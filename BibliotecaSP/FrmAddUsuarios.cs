@@ -17,14 +17,14 @@ namespace BibliotecaSP
     {
         private ServicioUsuarios servicioUsuarios;
         private FrmUsuarios frmUsuarios;
-        private Usuario usuario;
+        private Usuario? usuario;
         public FrmAddUsuarios(FrmUsuarios frmUsuarios)
         {
             InitializeComponent();
             this.servicioUsuarios = new ServicioUsuarios();
             comboActivo.SelectedIndex = 0;
             this.frmUsuarios = frmUsuarios;
-           
+
         }
         public FrmAddUsuarios(FrmUsuarios frmUsuarios, Usuario usuario)
         {
@@ -34,7 +34,7 @@ namespace BibliotecaSP
             this.frmUsuarios = frmUsuarios;
             this.usuario = usuario;
             this.lbTitulo.Text = "Editar Usuario";
-            this.txtID.ReadOnly=true;
+            this.txtID.ReadOnly = true;
             setUsuario(this.usuario);
         }
         public bool validInputs()
@@ -64,14 +64,15 @@ namespace BibliotecaSP
         public void setUsuario(Usuario usuario)
         {
             this.txtID.Text = usuario.IdUsuario.ToString();
-            this.txtNombre.Text= usuario.Nombre;
+            this.txtNombre.Text = usuario.Nombre;
             this.txtCorreo.Text = usuario.Correo;
             this.txtClave.Text = usuario.Clave;
             if (usuario.Activo.ToString() == "N") comboActivo.SelectedIndex = 1;
         }
         private Usuario getUsuario()
         {
-            if (validInputs()) {
+            if (validInputs())
+            {
                 var selectedIndex = this.comboActivo.SelectedItem.ToString();
                 var activo = "N";
                 if (selectedIndex == "Si")
@@ -93,9 +94,9 @@ namespace BibliotecaSP
             {
                 return null;
             }
-            
+
         }
-       
+
         private void label1_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -108,7 +109,8 @@ namespace BibliotecaSP
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if(this.usuario == null) {
+            if (this.usuario == null)
+            {
                 var usuario = this.getUsuario();
                 if (usuario != null)
                 {
@@ -128,7 +130,7 @@ namespace BibliotecaSP
             else
             {
                 var usuarioEditado = this.getUsuario();
-                if (usuarioEditado != null) 
+                if (usuarioEditado != null)
                 {
                     this.usuario.Nombre = usuarioEditado.Nombre;
                     this.usuario.Correo = usuarioEditado.Correo;
@@ -147,6 +149,11 @@ namespace BibliotecaSP
                     }
                 }
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

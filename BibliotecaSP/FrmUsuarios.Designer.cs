@@ -33,11 +33,13 @@
             dataGridUsuarios = new DataGridView();
             contextMenuStrip1 = new ContextMenuStrip(components);
             toolStripMenuItem1 = new ToolStripMenuItem();
-            toolStripMenuItem2 = new ToolStripMenuItem();
             btnAddUser = new Button();
             label1 = new Label();
             label2 = new Label();
             dataGridPermisos = new DataGridView();
+            MenuStripPermisos = new ContextMenuStrip(components);
+            btnEliminarPermiso = new ToolStripMenuItem();
+            btnEditarPermiso = new ToolStripMenuItem();
             dataGridRoles = new DataGridView();
             MenuStripRol = new ContextMenuStrip(components);
             btnEliminarRol = new ToolStripMenuItem();
@@ -48,6 +50,7 @@
             ((System.ComponentModel.ISupportInitialize)dataGridUsuarios).BeginInit();
             contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridPermisos).BeginInit();
+            MenuStripPermisos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridRoles).BeginInit();
             MenuStripRol.SuspendLayout();
             SuspendLayout();
@@ -75,25 +78,18 @@
             // 
             // contextMenuStrip1
             // 
-            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, toolStripMenuItem2 });
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1 });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(118, 48);
+            contextMenuStrip1.Size = new Size(105, 26);
             contextMenuStrip1.Text = "Editar";
             // 
             // toolStripMenuItem1
             // 
             toolStripMenuItem1.AccessibleName = "btnEditarUsuario";
             toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(117, 22);
+            toolStripMenuItem1.Size = new Size(104, 22);
             toolStripMenuItem1.Text = "Editar";
             toolStripMenuItem1.Click += btnEditar_Click;
-            // 
-            // toolStripMenuItem2
-            // 
-            toolStripMenuItem2.AccessibleName = "btnEliminarUsuario";
-            toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(117, 22);
-            toolStripMenuItem2.Text = "Eliminar";
             // 
             // btnAddUser
             // 
@@ -133,10 +129,31 @@
             // dataGridPermisos
             // 
             dataGridPermisos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridPermisos.ContextMenuStrip = MenuStripPermisos;
             dataGridPermisos.Location = new Point(0, 302);
             dataGridPermisos.Name = "dataGridPermisos";
             dataGridPermisos.Size = new Size(635, 150);
             dataGridPermisos.TabIndex = 13;
+            // 
+            // MenuStripPermisos
+            // 
+            MenuStripPermisos.Items.AddRange(new ToolStripItem[] { btnEliminarPermiso, btnEditarPermiso });
+            MenuStripPermisos.Name = "MenuStripPermisos";
+            MenuStripPermisos.Size = new Size(164, 48);
+            // 
+            // btnEliminarPermiso
+            // 
+            btnEliminarPermiso.Name = "btnEliminarPermiso";
+            btnEliminarPermiso.Size = new Size(163, 22);
+            btnEliminarPermiso.Text = "Eliminar Permiso";
+            btnEliminarPermiso.Click += eliminarPermiso_Click;
+            // 
+            // btnEditarPermiso
+            // 
+            btnEditarPermiso.Name = "btnEditarPermiso";
+            btnEditarPermiso.Size = new Size(163, 22);
+            btnEditarPermiso.Text = "Editar Permiso";
+            btnEditarPermiso.Click += editarPermiso_Click;
             // 
             // dataGridRoles
             // 
@@ -151,12 +168,12 @@
             // 
             MenuStripRol.Items.AddRange(new ToolStripItem[] { btnEliminarRol });
             MenuStripRol.Name = "MenuStripRol";
-            MenuStripRol.Size = new Size(181, 48);
+            MenuStripRol.Size = new Size(138, 26);
             // 
             // btnEliminarRol
             // 
             btnEliminarRol.Name = "btnEliminarRol";
-            btnEliminarRol.Size = new Size(180, 22);
+            btnEliminarRol.Size = new Size(137, 22);
             btnEliminarRol.Text = "Eliminar Rol";
             btnEliminarRol.Click += eliminarRol_Click;
             // 
@@ -171,6 +188,7 @@
             button1.Size = new Size(33, 34);
             button1.TabIndex = 15;
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -229,6 +247,7 @@
             ((System.ComponentModel.ISupportInitialize)dataGridUsuarios).EndInit();
             contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridPermisos).EndInit();
+            MenuStripPermisos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridRoles).EndInit();
             MenuStripRol.ResumeLayout(false);
             ResumeLayout(false);
@@ -248,10 +267,12 @@
         private Button button2;
         private TextBox txtFiltro;
         private ContextMenuStrip contextMenuStrip1;
-        private ToolStripMenuItem toolStripMenuItem2;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem toolStripMenuItem1;
         private ContextMenuStrip MenuStripRol;
         private ToolStripMenuItem btnEliminarRol;
+        private ContextMenuStrip MenuStripPermisos;
+        private ToolStripMenuItem btnEliminarPermiso;
+        private ToolStripMenuItem btnEditarPermiso;
     }
 }

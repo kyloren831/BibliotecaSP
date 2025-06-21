@@ -21,6 +21,7 @@ namespace DAL
         public DbSet<PermisoUsuario> PermisosUsuarios {  get; set; }
         public DbSet<Rol> Roles { get; set; }
         public DbSet<UsuarioRol> UsuarioRoles { get; set; }
+        public DbSet<PermisoRol> PermisosRoles { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -54,6 +55,26 @@ namespace DAL
                 .HasOne(up => up.Rol)
                 .WithMany(u => u.UsuarioRol)
                 .HasForeignKey(up => up.IdRol);
+
+            //Llaves foraneas para Pantallas
+            modelBuilder.Entity<Pantalla>()
+               .HasOne(p => p.Sistema)
+               .WithMany(s => s.Pantallas)
+               .HasForeignKey(p => p.IdSistema);
+
+            //Llave foranea permisos rol
+            modelBuilder.Entity<PermisoRol>()
+               .HasOne(up => up.Pantalla)
+               .WithMany(p => p.PermisosRol)
+               .HasForeignKey(up => up.IdPantalla);
+
+            modelBuilder.Entity<PermisoRol>()
+               .HasOne(up => up.Rol)
+               .WithMany(p => p.PermisosRol)
+               .HasForeignKey(up => up.IdRol);
+
+            modelBuilder.Entity<PermisoRol>()
+            .HasKey(x => new { x.IdRol, x.IdPantalla });
 
         }
 

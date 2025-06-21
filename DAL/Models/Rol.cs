@@ -17,5 +17,6 @@ namespace DAL.Models
         [Column("NOMBREROL")]
         public string NombreRol { get; set; }
         public List<UsuarioRol> UsuarioRol { get; set; }
+        public List<PermisoRol> PermisosRol{ get; set; }
     }
 }

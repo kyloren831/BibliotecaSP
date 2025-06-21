@@ -21,6 +21,8 @@ namespace DAL.Models
         public DateTime FechaCreacion { get; set; }
         [Column("RUTAEJECUTABLE")]
         public string RutaEjecutable { get; set; }
+
+        public List<Pantalla> Pantallas { get; set; }
         
     }
       

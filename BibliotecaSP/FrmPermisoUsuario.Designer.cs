@@ -33,10 +33,9 @@
             btnConfirmar = new Button();
             button1 = new Button();
             lbTitulo = new Label();
-            label2 = new Label();
+            lbID = new Label();
             label3 = new Label();
             comboIdPantalla = new ComboBox();
-            comboIdUsuario = new ComboBox();
             lbInsertar = new Label();
             label4 = new Label();
             label5 = new Label();
@@ -46,6 +45,8 @@
             checkBorrar = new CheckBox();
             checkModificar = new CheckBox();
             checkInsertar = new CheckBox();
+            lbIdUsuario = new Label();
+            label2 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -53,6 +54,7 @@
             // panel1
             // 
             panel1.BackColor = Color.Khaki;
+            panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -104,15 +106,15 @@
             lbTitulo.TabIndex = 29;
             lbTitulo.Text = "Agregar Permisos";
             // 
-            // label2
+            // lbID
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("SimSun", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(12, 118);
-            label2.Name = "label2";
-            label2.Size = new Size(130, 19);
-            label2.TabIndex = 30;
-            label2.Text = "ID Usuario:";
+            lbID.AutoSize = true;
+            lbID.Font = new Font("SimSun", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbID.Location = new Point(12, 118);
+            lbID.Name = "lbID";
+            lbID.Size = new Size(130, 19);
+            lbID.TabIndex = 30;
+            lbID.Text = "ID Usuario:";
             // 
             // label3
             // 
@@ -132,15 +134,6 @@
             comboIdPantalla.Name = "comboIdPantalla";
             comboIdPantalla.Size = new Size(74, 23);
             comboIdPantalla.TabIndex = 33;
-            // 
-            // comboIdUsuario
-            // 
-            comboIdUsuario.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboIdUsuario.FormattingEnabled = true;
-            comboIdUsuario.Location = new Point(144, 114);
-            comboIdUsuario.Name = "comboIdUsuario";
-            comboIdUsuario.Size = new Size(74, 23);
-            comboIdUsuario.TabIndex = 34;
             // 
             // lbInsertar
             // 
@@ -238,16 +231,36 @@
             checkInsertar.Text = "checkBox1";
             checkInsertar.UseVisualStyleBackColor = true;
             // 
+            // lbIdUsuario
+            // 
+            lbIdUsuario.AutoSize = true;
+            lbIdUsuario.Font = new Font("MS PGothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbIdUsuario.Location = new Point(146, 124);
+            lbIdUsuario.Name = "lbIdUsuario";
+            lbIdUsuario.Size = new Size(67, 13);
+            lbIdUsuario.TabIndex = 40;
+            lbIdUsuario.Text = "ID Usuario:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("SimSun", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(12, 9);
+            label2.Name = "label2";
+            label2.Size = new Size(61, 12);
+            label2.TabIndex = 47;
+            label2.Text = "Permisos";
+            // 
             // FrmPermisoUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(518, 404);
+            Controls.Add(lbIdUsuario);
             Controls.Add(panel2);
-            Controls.Add(comboIdUsuario);
             Controls.Add(comboIdPantalla);
             Controls.Add(label3);
-            Controls.Add(label2);
+            Controls.Add(lbID);
             Controls.Add(lbTitulo);
             Controls.Add(btnConfirmar);
             Controls.Add(button1);
@@ -272,10 +285,9 @@
         private Button btnConfirmar;
         private Button button1;
         private Label lbTitulo;
-        private Label label2;
+        private Label lbID;
         private Label label3;
         private ComboBox comboIdPantalla;
-        private ComboBox comboIdUsuario;
         private Label lbInsertar;
         private Label label4;
         private Label label5;
@@ -285,5 +297,7 @@
         private CheckBox checkBorrar;
         private CheckBox checkModificar;
         private CheckBox checkInsertar;
+        private Label lbIdUsuario;
+        private Label label2;
     }
 }
