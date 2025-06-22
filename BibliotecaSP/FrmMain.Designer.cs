@@ -38,14 +38,14 @@
             btnUsuarios = new Label();
             pictureBox1 = new PictureBox();
             panelContenido1 = new Panel();
-            panel3 = new Panel();
             pictureBox2 = new PictureBox();
+            panel3 = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelContenido1.SuspendLayout();
-            panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -165,6 +165,16 @@
             panelContenido1.Size = new Size(903, 499);
             panelContenido1.TabIndex = 2;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources._20250621_0129_Chica_y_Reloj_Mental_simple_compose_01jy8p6pazfcash0r01ym9f5z0;
+            pictureBox2.Location = new Point(0, 3);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(900, 493);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 0;
+            pictureBox2.TabStop = false;
+            // 
             // panel3
             // 
             panel3.BorderStyle = BorderStyle.FixedSingle;
@@ -175,16 +185,7 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(1114, 555);
             panel3.TabIndex = 3;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = Properties.Resources._20250621_0129_Chica_y_Reloj_Mental_simple_compose_01jy8p6pazfcash0r01ym9f5z0;
-            pictureBox2.Location = new Point(0, 3);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(900, 493);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 0;
-            pictureBox2.TabStop = false;
+            panel3.Paint += panel3_Paint;
             // 
             // FrmMain
             // 
@@ -204,8 +205,8 @@
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelContenido1.ResumeLayout(false);
-            panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel3.ResumeLayout(false);
             ResumeLayout(false);
         }
 

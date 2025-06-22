@@ -263,6 +263,45 @@ namespace BibliotecaSP
 
         }
 
+        private void txtFiltro_TextChanged(object sender, EventArgs e)
+        {
+            string searchValue = txtFiltro.Text.ToLower();
+            var Filtrados = new List<Sistema>();// Obtener el texto de búsqueda
+
+            if (string.IsNullOrEmpty(searchValue))
+            {
+                // Si no hay texto, mostrar todos los registros
+                Filtrados = this.sistemaList.ToList();
+                cargarGrid<Sistema>(this.dataGridSistemas, Filtrados);
+            }
+            else
+            {
+                if (searchValue != "Buscar por Nombre o por ID".ToLower())
+                {
+                    Filtrados = this.sistemaList.Where(c => c.Nombre.Contains(searchValue) ||
+                                          c.IdSistema.ToString().Contains(searchValue)).ToList();
+
+                    cargarGrid<Sistema>(this.dataGridSistemas, Filtrados);
+                }
+
+            }
+        }
+
+        private void txtFiltroSistema_leave(object sender, EventArgs e)
+        {
+            this.txtFiltro.Text = "Buscar por Nombre o por ID";
+        }
+
+        private void txtFiltroPantalla_Changed(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFiltro_Click(object sender, EventArgs e)
+        {
+            this.txtFiltro.Text = "";
+        }
+
         private void cargarGrid<T>(DataGridView dataGrid, List<T> items, List<string> columnasAOcultar = null)
         {
             dataGrid.Columns.Clear();

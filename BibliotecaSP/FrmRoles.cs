@@ -256,7 +256,7 @@ namespace BibliotecaSP
                     var idPantalla = filaSeleccionada.Cells[1].Value.ToString();
                     if (idRol != null && idPantalla != null)
                     {
-                        var respuesta = this.servicioPermisosRol.Buscar(int.Parse(idPantalla), int.Parse(idRol));
+                        var respuesta = this.servicioPermisosRol.Buscar(int.Parse(idRol), int.Parse(idPantalla));
                         if (respuesta != null)
                         {
                             List<string> idsPantallas = new List<string>();

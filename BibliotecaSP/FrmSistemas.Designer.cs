@@ -36,7 +36,6 @@
             EditarSistema = new ToolStripMenuItem();
             EliminarSistema = new ToolStripMenuItem();
             lbTitulo = new Label();
-            textBox1 = new TextBox();
             button1 = new Button();
             dataGridPantallas = new DataGridView();
             MenuPantallas = new ContextMenuStrip(components);
@@ -58,6 +57,9 @@
             txtFiltro.Size = new Size(257, 23);
             txtFiltro.TabIndex = 21;
             txtFiltro.Text = "Buscar por Nombre o ID";
+            txtFiltro.Click += txtFiltro_Click;
+            txtFiltro.TextChanged += txtFiltro_TextChanged;
+            txtFiltro.Leave += txtFiltroSistema_leave;
             // 
             // btnAddSistema
             // 
@@ -116,21 +118,13 @@
             lbTitulo.TabIndex = 18;
             lbTitulo.Text = "Gestion de Sistemas";
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(12, 273);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(257, 23);
-            textBox1.TabIndex = 26;
-            textBox1.Text = "Buscar por Nombre o ID";
-            // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(255, 255, 192);
             button1.Font = new Font("Palatino Linotype", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.Image = Properties.Resources.mas;
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(304, 268);
+            button1.Location = new Point(304, 249);
             button1.Name = "button1";
             button1.Size = new Size(144, 33);
             button1.TabIndex = 25;
@@ -143,7 +137,7 @@
             // 
             dataGridPantallas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridPantallas.ContextMenuStrip = MenuPantallas;
-            dataGridPantallas.Location = new Point(12, 307);
+            dataGridPantallas.Location = new Point(12, 288);
             dataGridPantallas.Name = "dataGridPantallas";
             dataGridPantallas.Size = new Size(436, 172);
             dataGridPantallas.TabIndex = 24;
@@ -173,7 +167,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("SimSun", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(12, 246);
+            label1.Location = new Point(12, 258);
             label1.Name = "label1";
             label1.Size = new Size(270, 24);
             label1.TabIndex = 23;
@@ -196,7 +190,6 @@
             BackColor = SystemColors.Control;
             ClientSize = new Size(898, 473);
             Controls.Add(pictureBox1);
-            Controls.Add(textBox1);
             Controls.Add(button1);
             Controls.Add(dataGridPantallas);
             Controls.Add(label1);
@@ -224,7 +217,6 @@
         private Button btnAddSistema;
         private DataGridView dataGridSistemas;
         private Label lbTitulo;
-        private TextBox textBox1;
         private Button button1;
         private DataGridView dataGridPantallas;
         private Label label1;
